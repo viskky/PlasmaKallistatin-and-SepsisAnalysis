@@ -4,7 +4,7 @@ read.csv(file.choose(), head=TRUE,sep=";",dec=",",na.strings="#NULL!")
 #simplify and extract the variables useful for analysis
 df=raw[,c(1,2,3,8,9,10,18,20:23,25:46)] 
 
-df$Sex=factor(df$Sex) # 1 = men
+df$Sex=factor(df$Sex) # 1= men
 df$Hospital.death=factor(df$Hospital.death) # 0 = survival, 1 = death
 df$X60.day.death=factor(df$X60.day.death) # 0 = survival, 1 = death
 df$Blood.Culture=factor(df$Blood.Culture) # 0 = negative, 1 = positive
