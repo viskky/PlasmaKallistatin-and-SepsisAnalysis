@@ -11,7 +11,7 @@ boxplot(ln_Kallistatin ~ BC+Days, data = df2,ylim=c(-2,9),las=1, ylab='Kallistat
         at = c(1:2, 4:5, 7:8),col=c("white","gray60"),xaxt = "n",yaxt = "n")
 axis(1,at=c(1.5,4.5,7.5),labels=c("Day 1","Day 3","Day 5"))
 axis(2,at=-1:9,las=2)
-legend("topright",levels(BC),fill =c("white","gray60"))
+legend("topright",levels(BC),fill =c("white","gray60"), bty="n")
 
 wilcox.test(df$Kallistatin.D1.~df$Blood.Culture) #determine the p-value for the boxplot
 wilcox.test(df$Kallistatin.D3.~df$Blood.Culture) #determine the p-value for the boxplot
@@ -34,7 +34,7 @@ boxplot(ln_Kallistatin ~ Sepsis+Days, data = df2,ylim=c(-1,9),las=1,ylab='Kallis
         at = c(1:2, 4:5, 7:8),col=c("white","gray60"),xaxt = "n",yaxt = "n")
 axis(1,at=c(1.5,4.5,7.5),labels=c("Day 1","Day 3","Day 5"))
 axis(2,at=-1:9,las=2)
-legend("topright",levels(Sepsis),fill =c("white","gray60"))
+legend("topright",levels(Sepsis),fill =c("white","gray60") bty="n")
 
 wilcox.test(df$Kallistatin.D1.~df$Shock) #determine the p-value for the boxplot
 wilcox.test(df$Kallistatin.D3.~df$Shock) #determine the p-value for the boxplot
