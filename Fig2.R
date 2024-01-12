@@ -30,7 +30,7 @@ n=length(df$Kallistatin.D1.)
 Days=factor(rep(c("Day 1", "Day 3", "Day 5"),c(n,n,n)))
 ln_Kallistatin=log2(Kallistatin)
 df2=data.frame(ln_Kallistatin,Sepsis,Days,BC)
-boxplot(ln_Kallistatin ~ Sepsis+Days, data = df2,ylim=c(-1,9),las=1,
+boxplot(ln_Kallistatin ~ Sepsis+Days, data = df2,ylim=c(-1,9),las=1,ylab='Kallistatin (Log2, µg/ml)',
         at = c(1:2, 4:5, 7:8),col=c("white","gray60"),xaxt = "n",yaxt = "n")
 axis(1,at=c(1.5,4.5,7.5),labels=c("Day 1","Day 3","Day 5"))
 axis(2,at=-1:9,las=2)
